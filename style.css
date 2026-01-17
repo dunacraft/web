@@ -278,17 +278,6 @@ body {
 		outline: 1px solid red;
     }
 
-    body {
-        /* Evita que aparezca la barra de abajo si el 125% se pasa un poco */
-        overflow-x: hidden;
-    }
-}
-
-    /* Si el fondo se ve cortado, forzamos que el body no tenga scroll horizontal */
-    body {
-        overflow-x: hidden;
-    }
-}
 
 
 
