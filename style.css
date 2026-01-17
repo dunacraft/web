@@ -89,7 +89,7 @@ body {
 }
 
 .ip_copy {
-	position: absolute !important;
+	position: fixed !important;
 	bottom: 30px !important;
 	left: auto !important;
 	right: 30px !important;
@@ -271,3 +271,4 @@ body {
         height: auto !important; /* Dejamos que el navegador calcule la altura real */
     }
 }
+
