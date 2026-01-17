@@ -1,0 +1,381 @@
+/* Dunacraft - Estilos Globales */
+
+img {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+    -ms-interpolation-mode: nearest-neighbor;
+}
+
+body {
+    background-image: linear-gradient(325deg,rgba(3,3,17,1.00) 0.00%,rgba(2,7,5,1.00) 47.05%,rgba(3,23,16,1.00) 100%);
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: black;
+    min-height: 100vh;
+}
+
+#main-container {
+    position: relative;
+    width: 95%;
+    max-width: 1440px;
+    margin: 0 auto;
+    height: 1500px;
+    overflow: hidden;
+}
+
+/* --- ESTILOS PARA EL ZOOM INTERNO --- */
+.marco-zoom {
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    display: inline-block;
+}
+
+.img-transicion {
+    transition: transform 0.4s ease !important;
+    display: block;
+}
+
+.marco-zoom:hover .img-transicion {
+    transform: scale(1.15);
+}
+
+.filtro-visual {
+    filter: contrast(.98) brightness(1.1) saturate(1.7);
+    min-height: 100vh;
+    width: 100%;
+}
+
+.overlay-color {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(54,58,63,0.20);
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 5;
+}
+
+.logo {
+    position: absolute;
+    top: 82px;
+    left: 105px;
+    width: 260px;
+    height: 66px;
+    user-select: none;
+    pointer-events: none;
+    -webkit-user-drag: none;
+}
+
+.menu_top {
+    height: 20px;
+    position: absolute;
+    top: 107px;
+    left: 695px;
+    width: 844px;
+    display: flex;
+    gap: 25px;
+    align-items: center;
+}
+
+.banner {
+    position: absolute;
+    top: 185px;
+    left: 75px;
+    user-select: none;
+    pointer-events: none;
+    -webkit-user-drag: none;
+}
+
+.boton_jugar {
+    position: absolute;
+    top: 595px;
+    left: 565px;
+    z-index: 10;
+}
+
+#img_jugar {
+    transition: transform 0.3s ease !important;
+}
+
+.boton_jugar:hover #img_jugar {
+    transform: scale(1.1);
+}
+
+.ip_copy {
+    position: fixed !important;
+    bottom: 30px !important;
+    left: auto !important;
+    right: 30px !important;
+    border-radius: 20px;
+    z-index: 99999 !important;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 1s ease;
+}
+
+.mostrar-mensaje {
+    opacity: 1 !important;
+}
+
+.recursos_title {
+    position: absolute;
+    top: 760px;
+    left: 71px;
+    user-select: none;
+    pointer-events: none;
+    -webkit-user-drag: none;
+}
+
+.recursos_image {
+    width: 952px;
+    height: 237px;
+    top: 816px;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+    align-items: center;
+    left: 74px;
+}
+
+.novedades_title {
+    position: absolute;
+    top: 1083px;
+    left: 108px;
+    user-select: none;
+    pointer-events: none;
+    -webkit-user-drag: none;
+}
+
+.novedades {
+    width: 863px;
+    height: 176px;
+    top: 1150px;
+    position: absolute;
+    left: 116px;
+    border-radius: 20px;
+    border: 2px solid #857E7E;
+    overflow: hidden;
+    position: relative;
+    gap: 20px;
+}
+
+.novedades_cont {
+    width: 564px;
+    height: 155px;
+    position: absolute;
+    top: 10px;
+    left: 286px;
+    color: #FFFFFF;
+    font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
+    overflow-y: auto;
+    padding-right: 10px;
+}
+
+.entrada-noticia {
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 10px;
+}
+
+.entrada-noticia h3 {
+    color: #ffffff;
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin: 0 0 5px 0;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+.entrada-noticia p {
+    color: #cccccc;
+    font-size: 1rem;
+    font-weight: normal;
+    line-height: 1.4;
+    margin: 0;
+    text-align: justify;
+    width: 544px;
+}
+
+.novedades_cont::-webkit-scrollbar {
+    width: 8px;
+}
+.novedades_cont::-webkit-scrollbar-thumb {
+    background: #a8a8a8;
+    border-radius: 15px;
+}
+
+.banner_1 {
+    width: 270px;
+    height: 557px;
+    position: absolute;
+    top: 769px;
+    left: 1058px;
+    border: 2px solid #A8A8A8;
+    border-radius: 20px;
+    user-select: none;
+    pointer-events: none;
+    -webkit-user-drag: none;
+}
+
+.boton_votar {
+    top: 1137px;
+    left: 1075px;
+    position: absolute;
+}
+
+.footer_duna {
+    width: 1300px;
+    height: 60px;
+    position: absolute;
+    top: 1400px;
+    left: 70px;
+    text-align: center;
+    padding: 13px 0;
+    border-top: 1px solid rgba(133, 126, 126, 0.3);
+}
+
+.footer_text {
+    color: #cccccc;
+    font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    user-select: none;
+}
+
+.footer_text span {
+    color: #ffffff;
+    font-weight: bold;
+}
+
+/* --- DISEÑO PARA MÓVILES --- */
+
+@media (max-width: 768px) {
+    #main-container {
+        height: auto; /* Permite que la web crezca hacia abajo */
+        overflow: visible;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 50px;
+    }
+
+    /* Menú superior adaptado */
+    .menu_top {
+        position: relative;
+        top: 20px;
+        left: 0;
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap; /* Para que no se amontonen */
+        gap: 15px;
+    }
+
+    /* Logo centrado */
+    .logo {
+        position: relative;
+        top: 40px;
+        left: 0;
+        display: block;
+        margin: 0 auto;
+    }
+
+    /* Banner y personaje */
+    .banner {
+        position: relative;
+        top: 60px;
+        left: 0;
+        width: 100%;
+        height: auto;
+    }
+
+    /* Botón Jugar central */
+    .boton_jugar {
+        position: relative;
+        top: 30px;
+        left: 0;
+        margin-bottom: 40px;
+    }
+
+    /* Títulos centrados */
+    .recursos_title, .novedades_title {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 90%;
+        height: auto;
+        margin: 40px 0 20px 0;
+    }
+
+    /* Cuadrícula de Recursos 2x2 */
+    .recursos_image {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: auto;
+        display: grid;
+        grid-template-columns: 1fr 1fr; /* Crea las dos columnas */
+        gap: 15px;
+        justify-items: center;
+        padding: 0 10px;
+    }
+
+    .marco-zoom {
+        width: 160px; /* Ajustado para móviles */
+        height: 160px;
+    }
+
+    .img-transicion {
+        width: 100%;
+        height: auto;
+    }
+
+    /* Novedades adaptadas */
+    .novedades {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 90%;
+        height: auto;
+        min-height: 250px;
+        flex-direction: column;
+        display: flex;
+    }
+
+    .news-icon {
+        width: 100%;
+        height: auto;
+    }
+
+    .novedades_cont {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 95%;
+        height: 200px;
+        padding: 15px;
+    }
+
+    .entrada-noticia p {
+        width: 100%;
+    }
+
+    /* Esconder banner vertical en móvil */
+    .banner_1, .boton_votar {
+        position: relative;
+        top: 20px;
+        left: 0;
+        margin: 20px auto;
+    }
+
+    /* Footer */
+    .footer_duna {
+        position: relative;
+        top: 50px;
+        left: 0;
+        width: 100%;
+    }
+}
