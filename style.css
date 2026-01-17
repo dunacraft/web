@@ -256,21 +256,13 @@ body {
     #main-container {
         /* 1. Aplicamos el escalado */
         transform: scale(0.80);
-        
-        /* 2. Fijamos el origen arriba y al centro para que el escalado no lo mueva a los lados */
-        transform-origin: top center;
-        
-        /* 3. El truco maestro para centrar: */
-        left: 50%;
-        margin-left: -50%; /* Esto anula el desplazamiento y lo clava al centro */
-        width: 100%;       
-        
-        /* 4. Solución al aire de abajo: */
-        /* Reducimos el margen inferior con un valor negativo para "subir" el pie de página */
-        /* El valor -20% compensa exactamente el 0.8 de escala */
-        margin-bottom: -20%; 
-        
-        position: relative;
+		position: relative;
+		width: 98%;
+		max-width: 1440px;
+		margin: 0 auto;
+		height: 1500px;
+		overflow: hidden;
+		outline: 1px solid red;
     }
 
     /* Si el fondo se ve cortado, forzamos que el body no tenga scroll horizontal */
@@ -278,5 +270,6 @@ body {
         overflow-x: hidden;
     }
 }
+
 
 
