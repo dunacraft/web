@@ -263,7 +263,7 @@ body {
         
         /* 3. El secreto: Cambiar el origen a la esquina superior izquierda */
         /* Al usar 'top left', el diseño se pega a la esquina y es más fácil de controlar */
-        transform-origin: top center;
+        transform-origin: top left;
 
         /* 4. Forzar el ancho para que el 80% quepa en la pantalla */
         /* Como 1280 / 0.8 = 1600, le decimos que el contenedor 'crea' que tiene espacio */
@@ -289,6 +289,7 @@ body {
         overflow-x: hidden;
     }
 }
+
 
 
 
