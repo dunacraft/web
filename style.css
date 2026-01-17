@@ -252,10 +252,10 @@ body {
 @media (max-width: 1440px){
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1280px) {
     #main-container {
         /* 1. Aplicamos el escalado */
-        transform: scale(0.85);
+        transform: scale(0.80);
         
         /* 2. Fijamos el origen arriba y al centro para que el escalado no lo mueva a los lados */
         transform-origin: top center;
@@ -278,4 +278,5 @@ body {
         overflow-x: hidden;
     }
 }
+
 
