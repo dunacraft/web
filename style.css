@@ -254,22 +254,41 @@ body {
 
 @media (max-width: 1280px) {
     #main-container {
-        /* 1. Aplicamos el escalado */
-        transform: scale(0.80);
-		position: relative;
-		width: 98%;
-		max-width: 1440px;
-		margin: 0 auto;
-		height: 1500px;
-		overflow: hidden;
-		outline: 1px solid red;
+        /* 1. Resetear cualquier posición previa que esté molestando */
+        left: 0 !important;
+        margin: 0 auto !important;
+
+        /* 2. Aplicar la escala */
+        transform: scale(0.8);
+        
+        /* 3. El secreto: Cambiar el origen a la esquina superior izquierda */
+        /* Al usar 'top left', el diseño se pega a la esquina y es más fácil de controlar */
+        transform-origin: top left;
+
+        /* 4. Forzar el ancho para que el 80% quepa en la pantalla */
+        /* Como 1280 / 0.8 = 1600, le decimos que el contenedor 'crea' que tiene espacio */
+        width: 125% !important; 
+        
+        /* 5. Empujarlo un poco a la derecha si queda muy pegado al borde izquierdo */
+        /* Ajusta este 10% según veas en tu MacBook */
+        margin-left: 10% !important; 
+
+        /* 6. Quitar el aire de abajo */
+        margin-bottom: -30% !important;
     }
+
+    body {
+        /* Evita que aparezca la barra de abajo si el 125% se pasa un poco */
+        overflow-x: hidden;
+    }
+}
 
     /* Si el fondo se ve cortado, forzamos que el body no tenga scroll horizontal */
     body {
         overflow-x: hidden;
     }
 }
+
 
 
 
