@@ -2,14 +2,13 @@
 <html>
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Dunacraft</title>
 <link rel="icon" type="image/png" href="assets/ui/icons/favicon.png">
-<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="style.css" media="screen and (min-width: 769px)">
 
 <script type="text/javascript">
 document.addEventListener('click', function (e) {
-    const targetBoton = e.target.closest('.boton_jugar');
+    const targetBoton = e.target.closest('.boton_ip');
     if (targetBoton) {
         e.preventDefault();
         const ip = "mc.dunacraft.net";
@@ -58,17 +57,17 @@ function MM_swapImage() { //v3.0
         <img src="assets/images/logo.png" alt="" width="200" height="51" class="logo"/>
         
         <div class="menu_top">
-            <a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('boton_inicio','','assets/ui/buttons/boton_inicio2.png',1)"><img src="assets/ui/buttons/boton_inicio1.png" alt="" width="83" height="25" id="boton_inicio"></a>
-            <a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('boton_tienda','','assets/ui/buttons/boton_tienda2.png',1)"><img src="assets/ui/buttons/boton_tienda1.png" alt="" width="94" height="25" id="boton_tienda"></a> 
-            <a href="https://discord.gg/Xc39XEyR" target="_blank" onMouseOver="MM_swapImage('boton_discord','','assets/ui/buttons/boton_discord_2.png',1)" onMouseOut="MM_swapImgRestore()"><img src="assets/ui/buttons/boton_discord_1.png" alt="" width="103" height="25" id="boton_discord"></a>
-            <a href="https://www.instagram.com/dunacraft_/" target="_blank" onMouseOver="MM_swapImage('boton_instagram','','assets/ui/buttons/boton_instagram2.png',1)" onMouseOut="MM_swapImgRestore()"><img src="assets/ui/buttons/boton_instagram1.png" alt="" width="125" height="25" id="boton_instagram"></a>
-            <a href="https://www.youtube.com/@Dunacraft" target="_blank" onMouseOver="MM_swapImage('boton_youtube','','assets/ui/buttons/boton_youtube2.png',1)" onMouseOut="MM_swapImgRestore()"><img src="assets/ui/buttons/boton_youtube1.png" alt="" width="108" height="25" id="boton_youtube"></a>
+            <a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('inicio','','assets/ui/buttons/inicio_.png',1)"><img src="assets/ui/buttons/inicio.png" alt="" width="83" height="25" id="inicio"></a>
+            <a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('tienda','','assets/ui/buttons/tienda_.png',1)"><img src="assets/ui/buttons/tienda.png" alt="" width="94" height="25" id="tienda"></a> 
+            <a href="https://discord.gg/Xc39XEyR" target="_blank" onMouseOver="MM_swapImage('discord','','assets/ui/buttons/discord_.png',1)" onMouseOut="MM_swapImgRestore()"><img src="assets/ui/buttons/discord.png" alt="" width="103" height="25" id="discord"></a>
+            <a href="https://www.instagram.com/dunacraft_/" target="_blank" onMouseOver="MM_swapImage('instagram','','assets/ui/buttons/instagram_.png',1)" onMouseOut="MM_swapImgRestore()"><img src="assets/ui/buttons/instagram.png" alt="" width="125" height="25" id="instagram"></a>
+            <a href="https://www.youtube.com/@Dunacraft" target="_blank" onMouseOver="MM_swapImage('youtube','','assets/ui/buttons/youtube_.png',1)" onMouseOut="MM_swapImgRestore()"><img src="assets/ui/buttons/youtube.png" alt="" width="108" height="25" id="youtube"></a>
         </div>
 
-        <img src="assets/images/Banner_Inicio.png" alt="" width="1300" height="678" class="banner"/>
+        <img src="assets/images/banner.png" alt="" width="1300" height="678" class="banner"/>
         
         <div class="banner_1"><img src="assets/images/banner_vert.png" alt="" width="270" height="557" class="banner_image1"/>&nbsp;</div>
-      <a href="#" class="boton_votar" onMouseOver="MM_swapImage('boton_votar','','assets/ui/buttons/boton_votar.png',1)" onMouseOut="MM_swapImgRestore()"><img src="assets/ui/buttons/boton_votar.png" alt="" width="238" height="82" id="boton_votar"></a><a href="#" class="boton_jugar" onMouseOver="MM_swapImage('img_jugar','','assets/ui/buttons/boton_jugar.png',1)" onMouseOut="MM_swapImgRestore()"> <img src="assets/ui/buttons/boton_jugar.png" alt="" width="185" height="63" id="img_jugar"> </a><img src="assets/ui/titles/recursos_title.png" alt="" width="952" height="55" class="recursos_title"/><img src="assets/ui/titles/novedades_title.png" alt="" width="297" height="45" class="novedades_title"/>
+      <a href="#" class="boton_votar" onMouseOver="MM_swapImage('boton_votar','','assets/ui/buttons/boton_votar.png',1)" onMouseOut="MM_swapImgRestore()"><img src="assets/ui/buttons/boton_votar.png" alt="" width="238" height="82" id="boton_votar"></a><a href="#" class="boton_ip" onMouseOver="MM_swapImage('img_jugar','','assets/ui/buttons/boton_ip.png',1)" onMouseOut="MM_swapImgRestore()"> <img src="assets/ui/buttons/boton_ip.png" alt="" width="185" height="63" id="img_ip"> </a><img src="assets/ui/titles/recursos_title.png" alt="" width="952" height="55" class="recursos_title"/><img src="assets/ui/titles/novedades_title.png" alt="" width="297" height="45" class="novedades_title"/>
       
         <div class="recursos_image">
             <div class="marco-zoom">
