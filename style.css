@@ -22,6 +22,7 @@ body {
 	margin: 0 auto;
 	height: 1500px;
 	overflow: hidden;
+	outline: 1px solid red;
 }
 
 .filtro-visual {
@@ -88,15 +89,15 @@ body {
 }
 
 .ip_copy {
-    position: fixed !important;
-    bottom: 30px !important;
-    left: auto !important;
-    right: 30px !important;
-    border-radius: 20px;
-    z-index: 99999 !important;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 1s ease;
+	position: absolute !important;
+	bottom: 30px !important;
+	left: auto !important;
+	right: 30px !important;
+	border-radius: 20px;
+	z-index: 99999 !important;
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity 1s ease;
 }
 
 .mostrar-mensaje {
@@ -254,47 +255,19 @@ body {
 
 @media (max-width: 1280px) {
     #main-container {
-        /* 1. Resetear cualquier posición previa que esté molestando */
         left: 0 !important;
         margin: 0 auto !important;
-
-        /* 2. Aplicar la escala */
         transform: scale(0.85);
-        
-        /* 3. El secreto: Cambiar el origen a la esquina superior izquierda */
-        /* Al usar 'top left', el diseño se pega a la esquina y es más fácil de controlar */
         transform-origin: top left;
-
-        /* 4. Forzar el ancho para que el 80% quepa en la pantalla */
-        /* Como 1280 / 0.8 = 1600, le decimos que el contenedor 'crea' que tiene espacio */
-        width: 125% !important; 
-        
-        /* 5. Empujarlo un poco a la derecha si queda muy pegado al borde izquierdo */
-        /* Ajusta este 10% según veas en tu MacBook */
+        width: 117.6% !important; /* Proporción exacta para 0.85 */
         margin-left: 2.2% !important; 
-
-        /* 6. Quitar el aire de abajo */
-        margin-bottom: -17.5% !important;
-		outline: 1px solid red;
+        
+        /* Esto elimina el aire de abajo definitivamente */
+        margin-bottom: -220px !important; 
     }
-	body {
-        /* Evita que aparezca la barra de abajo si el 125% se pasa un poco */
+    
+    body {
         overflow-x: hidden;
+        height: auto !important; /* Dejamos que el navegador calcule la altura real */
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
