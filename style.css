@@ -274,7 +274,7 @@ body {
         margin-left: 2% !important; 
 
         /* 6. Quitar el aire de abajo */
-        margin-bottom: -30% !important;
+        margin-bottom: 0% !important;
 		outline: 1px solid red;
     }
 
@@ -289,6 +289,7 @@ body {
         overflow-x: hidden;
     }
 }
+
 
 
 
