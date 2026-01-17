@@ -22,7 +22,7 @@ body {
 	margin: 0 auto;
 	height: 1500px;
 	overflow: hidden;
-	outline: 1px solid red;
+	outline: 0px solid red;
 }
 
 .filtro-visual {
@@ -90,7 +90,7 @@ body {
 }
 
 .ip_copy {
-	position: absolute !important;
+	position: fixed !important;
 	bottom: 30px !important;
 	left: auto !important;
 	right: 30px !important;
@@ -262,13 +262,11 @@ body {
         transform-origin: top left;
         width: 117.6% !important; /* Proporción exacta para 0.85 */
         margin-left: 2.2% !important; 
-        
-        /* Esto elimina el aire de abajo definitivamente */
-        margin-bottom: -220px !important; 
+	    outline: 1px solid red;
     }
     
     body {
 	overflow-x: hidden;
-	height: 1270px !important; /* Dejamos que el navegador calcule la altura real */
+	height: 1279px !important; /* Dejamos que el navegador calcule la altura real */
     }
 }
