@@ -262,7 +262,7 @@ body {
         transform-origin: top left;
         width: 117.6% !important; /* Proporción exacta para 0.85 */
         margin-left: 2.2% !important; 
-	    outline: 1px solid red;
+	    outline: 0px solid red;
     }
     
     body {
