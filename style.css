@@ -253,24 +253,29 @@ body {
 @media (max-width: 1440px){
 }
 
-/* Este marcador detecta pantallas de 1280px o menos (como tu MacBook) */
-@media (max-width: 1280px) {
+@media (max-width: 1500px) {
     #main-container {
-        /* Aplicamos el zoom out del 80% */
-        transform: scale(0.8);
+        /* 1. Aplicamos el escalado */
+        transform: scale(0.85);
         
-        /* IMPORTANTE: El origen del escalado debe ser arriba al centro 
-           para que no queden huecos negros arriba */
+        /* 2. Fijamos el origen arriba y al centro para que el escalado no lo mueva a los lados */
         transform-origin: top center;
         
-        /* Al encogerse el contenedor al 80%, visualmente ocupa menos ancho.
-           Para que siga llenando la pantalla de la Mac, compensamos el ancho: */
-        width: 125%; 
+        /* 3. El truco maestro para centrar: */
+        left: 50%;
+        margin-left: -50%; /* Esto anula el desplazamiento y lo clava al centro */
+        width: 100%;       
         
-        /* Centramos el contenedor después de haberlo estirado */
-        margin-left: -12.5%; 
+        /* 4. Solución al aire de abajo: */
+        /* Reducimos el margen inferior con un valor negativo para "subir" el pie de página */
+        /* El valor -20% compensa exactamente el 0.8 de escala */
+        margin-bottom: -20%; 
         
-        /* Evitamos que aparezca scroll horizontal innecesario */
+        position: relative;
+    }
+
+    /* Si el fondo se ve cortado, forzamos que el body no tenga scroll horizontal */
+    body {
         overflow-x: hidden;
     }
 }
