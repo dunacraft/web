@@ -211,14 +211,15 @@ body {
 
 .ip_copy {
 	position: fixed !important;
-	bottom: 30px !important;
-	left: auto !important;
-	right: 30px !important;
+	bottom: 10px !important; /* Centrado vertical absoluto */
+    left: 50% !important; /* Centrado horizontal absoluto */
 	border-radius: 20px;
 	z-index: 99999 !important;
 	opacity: 0;
 	pointer-events: none;
 	transition: opacity 1s ease;
+	transform: translate(-50%, -50%) scale(0.7) !important;
+	width: 80%
 }
 
 .mostrar-mensaje {
