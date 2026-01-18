@@ -20,17 +20,14 @@ body {
 }
 
 #main-container {
-    width: 360px !important; 
-    height: 655px !important;
+    width: 100% !important; /* Cambiado de 360px a 100% para que llene el ancho horizontal */
+    max-width: 450px !important; /* Mantiene el diseño limpio si el móvil es muy ancho */
+    height: auto !important; /* IMPORTANTE: Cambiado de 655px a auto para que no se corte al rotar */
+    min-height: 100vh !important;
     position: relative !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-    left: 0 !important;
-    right: 0 !important;
-    overflow: hidden !important;
-    transform: none !important; 
-    outline: 0px solid red;
-	filter: contrast(0.9) brightness(1.0) saturate(1.8) !important;
+    margin: 0 auto !important;
+    overflow: visible !important; /* Permite que el contenido fluya hacia abajo */
+    /* ... resto de tus estilos ... */
 }
 
 .overlay-color {
