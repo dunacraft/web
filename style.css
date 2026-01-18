@@ -65,7 +65,9 @@ body {
 	align-items: center;
 }
 
-.header-mobile { display: none; }
+.votar_title, .header-mobile {
+    display: none !important;
+}
 
 .banner {
     position: absolute;
