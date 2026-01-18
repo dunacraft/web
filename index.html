@@ -48,6 +48,13 @@ function MM_swapImage() { //v3.0
    if ((x=MM_findObj(a[i]))!=null){document.MM_sr[j++]=x; if(!x.oSrc) x.oSrc=x.src; x.src=a[i+2];}
 }
 </script>
+	
+<script>
+function toggleMenu() {
+    const nav = document.getElementById('mobile-nav');
+    nav.classList.toggle('active');
+}
+</script>
 </head>
 
 <body onLoad="MM_preloadImages('assets/ui/buttons/boton_jugar.png','assets/images/recursos_image/wiki.png','assets/images/recursos_image/reglamento.png','assets/images/recursos_image/cronicas.png','assets/images/recursos_image/modpack.png','assets/ui/buttons/boton_youtube2.png','assets/ui/buttons/boton_instagram2.png','assets/ui/buttons/boton_tienda2.png','assets/ui/buttons/boton_inicio2.png','assets/ui/buttons/boton_discord_2.png','assets/ui/buttons/boton_votar.png')">
@@ -57,6 +64,26 @@ function MM_swapImage() { //v3.0
 
     <div id="main-container"> 
         <img src="assets/images/logo.png" alt="" width="200" height="51" class="logo"/>
+		
+		<header class="header-mobile">
+			<div class="header-container">
+				<img src="assets/images/logo.png" class="logo-hamburguesa" alt="Logo">
+
+				<button class="hamburger" onclick="toggleMenu()">
+					<span></span>
+					<span></span>
+					<span></span>
+				</button>
+			</div>
+
+			<nav class="nav-links" id="mobile-nav">
+				<a href="#inicio">INICIO</a>
+				<a href="#tienda">TIENDA</a>
+				<a href="#discord">DISCORD</a>
+				<a href="#instagram">INSTAGRAM</a>
+				<a href="#youtube">YOUTUBE</a>
+			</nav>
+		</header>
         
         <div class="menu_top">
             <a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('inicio','','assets/ui/buttons/inicio_.png',1)"><img src="assets/ui/buttons/inicio.png" alt="" width="83" height="25" id="inicio"></a>

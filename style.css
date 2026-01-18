@@ -65,6 +65,8 @@ body {
 	align-items: center;
 }
 
+.header-mobile { display: none; }
+
 .banner {
     position: absolute;
     top: 185px;

@@ -1,4 +1,4 @@
-/* Dunacraft | MOBILE BOSS BATTLE */
+/* Dunacraft | MOBILE CSS */
 
 img {
     image-rendering: -webkit-optimize-contrast;
@@ -58,52 +58,83 @@ body {
     display: none !important;
 }
 
-.menu_top {
-    position: relative !important;
-    top: -2px !important;
-    
-    /* 1. Fondo negro al 50% */
-    background-color: rgba(0, 0, 0, 0.5) !important;
-    
-    /* 2. Extender de lado a lado ignorando al padre */
-    width: 500px !important;
-    left: 50% !important;
-    transform: translateX(-50%) !important; /* Centra el bloque de 100vw respecto a la pantalla */
-    
-    /* 3. Mantener botones centrados */
-    display: flex !important;
-    justify-content: center; 
-    flex-wrap: wrap;  
-    gap: 10px; 
-    height: 10px !important;
-    padding: 15px 0; /* Espacio interno para que el fondo no pegue a los botones */
-    outline: 0px solid red;	
+/* OCULTAR MENÚ VIEJO */
+.menu_top { display: none !important; }
+
+/* HEADER PRINCIPAL */
+.header-mobile {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 50px;
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 10000;
+    border-bottom: 0px solid rgba(255, 255, 255, 0.1);
 }
 
-.menu_top a img {
-    width: auto;  
-    height: 14px !important; 
+.header-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    height: 100%;
 }
 
-.menu_top a img {
-    pointer-events: none !important; 
-    transition: none !important;    
-    transform: none !important;      
-    user-select: none;
-    -webkit-user-drag: none;
+.logo-hamburguesa {
+    height: 30px; /* Ajusta según tu logo */
 }
 
-.menu_top a:hover, .menu_top a:active {
-    background: none !important;
-    transform: none !important;
-    outline: none !important;
+/* BOTÓN HAMBURGUESA */
+.hamburger {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.hamburger span {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    border-radius: 3px;
+    transition: 0.3s;
+}
+
+/* MENÚ DESPLEGABLE (Diseño de la captura DiosesMC) */
+.nav-links {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #1a1a1a;
+    display: none; /* Oculto por defecto */
+    flex-direction: column;
+    padding: 20px 0;
+    border-bottom: 2px solid #857E7E;
+}
+
+.nav-links.active {
+    display: flex; /* Se muestra al hacer click */
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 15px 30px;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
 }
 
 .banner {
     width: 95% !important;
     height: auto !important; 
     position: absolute;
-    top: 55px;
+    top: 60px;
     left: 2.8%;
 	user-select: none;
 	pointer-events: none;
@@ -113,7 +144,7 @@ body {
 
 .boton_ip {
     position: relative !important;
-    top: 121px !important;
+    top: 165px !important;
     left: 35.7% !important;
     display: inline-block !important; 
     margin: 0 !important; 
