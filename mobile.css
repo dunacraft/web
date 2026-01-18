@@ -217,7 +217,7 @@ body {
 	width: 330px;
 	height: auto;
 	position: absolute;
-	top: 349px;
+	top: 1349px;
 	left: 3.3%;
 	border: 2px solid #A8A8A8;
 	border-radius: 20px;
@@ -235,7 +235,7 @@ img[src*="banner_vert"] {
 }
 	
 .boton_votar {
-	top: 793px;
+	top: 1793px;
 	left: 16%;
 	position: absolute;
 }
@@ -244,8 +244,8 @@ img[src*="banner_vert"] {
 	width: 163px;
 	height: auto;
 	position: absolute;
-	top: 1060px;
-	left: 3.3%;
+	top: 368px;
+	left: 9.3%;
 	user-select: none;
 	pointer-events: none;
 	-webkit-user-drag: none;
@@ -253,11 +253,11 @@ img[src*="banner_vert"] {
 
 .novedades {
     /* Mantenemos tus medidas y posición, pero activamos el flujo vertical */
-    width: 80% !important; /* Ajustado para tu caja de 380px */
+    width: 86% !important; /* Ajustado para tu caja de 380px */
     max-width: 330px !important;
     height: auto !important; /* Altura automática para que crezca con el contenido */
     position: absolute !important;
-    top: 1110px !important;
+    top: 350px !important;
     left: 50% !important;
     transform: translateX(-50%) !important;
     
@@ -266,7 +266,7 @@ img[src*="banner_vert"] {
     align-items: center !important;
     gap: 15px !important;
     padding: 15px !important;
-	padding-top: 0 !important;
+	padding-top: 50px !important;
 	overflow: hidden !important; /* Esto recorta las esquinas de la imagen */
     border-radius: 20px;
     border: 2px solid #857E7E;
@@ -292,9 +292,7 @@ img[src*="banner_vert"] {
 }
 
 .novedades img[src*="news.png"] {
-    width: 113% !important; /* Ajusta este % para el tamaño que desees */
-    height: auto !important;
-    display: block !important;
+    display: none !important;
 }
 	
 .footer_duna {
