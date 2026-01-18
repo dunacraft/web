@@ -17,7 +17,6 @@ body {
     overflow-x: hidden;
     background-color: black;
     min-height: 100vh;
-    filter: contrast(0.9) brightness(1.0) saturate(1) !important;
 }
 
 #main-container {
@@ -31,6 +30,7 @@ body {
     overflow: hidden !important;
     transform: none !important; 
     outline: 0px solid red;
+	filter: contrast(0.9) brightness(1.0) saturate(1.8) !important;
 }
 
 .overlay-color {

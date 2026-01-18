@@ -17,7 +17,6 @@ body {
     overflow-x: hidden;
     background-color: black;
     min-height: 100vh;
-    filter: contrast(0.9) brightness(1.0) saturate(1) !important;
 }
 
 #main-container {
@@ -28,8 +27,9 @@ body {
 	height: 1500px;
 	overflow: hidden;
 	outline: 0px solid red;
-	filter: contrast(.98) brightness(1.1) saturate(1.7) !important;
 	background: transparent !important;
+	z-index: 999999 !important;
+	filter: contrast(0.9) brightness(1.0) saturate(1.8) !important;
 }
 
 .logo {
@@ -83,18 +83,18 @@ body {
 }
 
 .ip_copy {
-	position: fixed !important;
-	bottom: 30px !important;
-	left: auto !important;
-	right: 30px !important;
-	border-radius: 20px;
-	z-index: 99999 !important;
-	opacity: 0;
-	pointer-events: none;
-	transition: opacity 1s ease;
+    position: fixed !important;
+    bottom: 30px !important;
+    right: 30px !important;
+    border-radius: 20px;
+    z-index: 999999 !important; /* Un nivel muy alto para que siempre esté arriba */
+    opacity: 0; /* Cambiado de 100 a 0 para que nazca invisible */
+    pointer-events: none;
+    transition: opacity 1s ease; /* Transición suave de entrada/salida */
 }
 
-.mostrar-mensaje {
+/* Esta es la clase que el JavaScript activará */
+.ip_copy.mostrar-mensaje {
     opacity: 1 !important;
 }
 
