@@ -12,38 +12,39 @@ body {
 	padding: 0;
 	overflow-x: hidden;
 	background-color: black;
-	min-height: 100vh;
+	min-height: 77.8vh;
 }
 
 #main-container {
     width: 360px !important; 
-    height: 3000px !important;
+    height: 665px !important;
     position: relative !important;
     margin-left: auto !important;
     margin-right: auto !important;
     left: 0 !important;
     right: 0 !important;
-    /*overflow: hidden !important;*/ 
+    overflow: hidden !important;*/ 
     transform: none !important; 
     outline: 1px solid red;
 }
 
 .filtro-visual {
 	filter: contrast(.98) brightness(1.1) saturate(1.7);
-	min-height: 100vh;
 	width: 100%;
-	height: 2000px;
+	height: 665px;
+	min-height: 77.8vh;
 }
 
 .overlay-color {
-    width: 100%;
-    height: 100%;
-    background-color: rgba(54,58,63,0.20);
-    position: fixed;
-    top: 0;
-    left: 0;
-    pointer-events: none;
-    z-index: 5;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(54,58,63,0.20);
+	position: fixed;
+	top: 0;
+	left: 0;
+	pointer-events: none;
+	z-index: 5;
+	max-width: 100vh;
 }
 
 .logo {
@@ -170,6 +171,7 @@ body {
     transform: none !important;
     user-select: none;
     -webkit-user-drag: none;
+	
 }
 
 .boton_ip:hover #img_ip {
@@ -261,9 +263,10 @@ body {
 	height: auto;
 	position: absolute;
 	top: 330px;
-	left: 9.3%;
+	left: 5.9%;
 	user-select: none;
 	pointer-events: none;
+	padding-right: 5px !important;
 	-webkit-user-drag: none;
 }
 
@@ -294,7 +297,7 @@ body {
     position: relative !important; 
     top: 0 !important;
     left: 0 !important;
-    width: 90% !important; /* Ocupa todo el ancho de la caja gris */
+    width: 98% !important; /* Ocupa todo el ancho de la caja gris */
     height: 130px !important; /* Altura fija para el scroll de noticias */
     overflow-y: auto;
     color: #FFFFFF;
@@ -324,6 +327,7 @@ body {
 	user-select: none;
 	pointer-events: none;
 	-webkit-user-drag: none;
+	display: none !important;
 }
 
 img[src*="banner_vert"] {
@@ -332,21 +336,36 @@ img[src*="banner_vert"] {
     display: block !important;
     margin: 0 auto !important; /* Lo centra horizontalmente */
     position: relative !important;
+	display: none !important;
 }
 	
 .boton_votar {
-	top: 1793px;
-	left: 16%;
+	top: 530px;
+	left: 50%;
 	position: absolute;
+}
+
+.boton_votar img {
+    width: 140px !important; /* O ajusta este valor exacto en píxeles */
+    height: auto !important;
+    transition: none !important;
 }
 	
 .footer_duna {
-	width: 1300px; 
-	height: 60px;
-	position: absolute;
-	top: 1400px; 
-	left: 70px;
-	text-align: center;
-	padding: 13px 0;
-	border-top: 1px solid rgba(133, 126, 126, 0.3);
+    /* Mantenemos tu estructura base pero corregimos el ancho para móvil */
+    width: 100% !important; 
+    height: auto !important;
+    position: absolute !important;
+    top: 600px !important; /* Ajusta según el largo final de tu página */
+    left: 0 !important;
+    text-align: center !important;
+    padding: 0px 0 !important;
+    
+    /* CAMBIO DE COLOR */
+    background-color: rgba(0, 0, 0, 0.0) !important; /* Fondo sutil */
+    color: #A8A8A8 !important; /* Color de texto gris suave */
+    border-top: 1px solid rgba(133, 126, 126, 0.3) !important; /* Tu línea divisoria */
+    
+    font-family: "Gill Sans", sans-serif !important;
+    font-size: 14px !important;
 }
