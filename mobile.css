@@ -20,14 +20,19 @@ body {
 }
 
 #main-container {
-    width: 100% !important; /* Cambiado de 360px a 100% para que llene el ancho horizontal */
-    max-width: 450px !important; /* Mantiene el diseño limpio si el móvil es muy ancho */
-    height: auto !important; /* IMPORTANTE: Cambiado de 655px a auto para que no se corte al rotar */
-    min-height: 100vh !important;
+    /* En lugar de 360px, usamos un porcentaje para que sea elástico */
+    width: 95% !important; 
+    /* Pero le ponemos un máximo para que no se estire infinito en tablets */
+    max-width: 550px !important; 
+    
+    height: auto !important; /* Permitimos que crezca hacia abajo */
     position: relative !important;
-    margin: 0 auto !important;
-    overflow: visible !important; /* Permite que el contenido fluya hacia abajo */
-    /* ... resto de tus estilos ... */
+    margin: 0 auto !important; /* Esto mantiene el bloque centrado */
+    left: 0 !important;
+    right: 0 !important;
+    overflow: visible !important; 
+    transform: none !important; 
+    filter: contrast(0.9) brightness(1.0) saturate(1.8) !important;
 }
 
 .overlay-color {
