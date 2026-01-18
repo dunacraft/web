@@ -61,29 +61,29 @@ function toggleMenu() {
 
 <div class="filtro-visual">
     <div class="overlay-color"></div>
+	
+	<header class="header-mobile">
+	<div class="header-container">
+		<img src="assets/images/logo.png" class="logo-hamburguesa" alt="Logo">
+
+		<button class="hamburger" onclick="toggleMenu()">
+			<span></span>
+			<span></span>
+			<span></span>
+		</button>
+	</div>
+
+	<nav class="nav-links" id="mobile-nav">
+		<a href="#inicio"><img src="assets/ui/buttons/inicio.png"></a>
+		<a href="#tienda"><img src="assets/ui/buttons/tienda.png"></a>
+		<a href="#discord"><img src="assets/ui/buttons/discord.png"></a>
+		<a href="#instagram"><img src="assets/ui/buttons/instagram.png"></a>
+		<a href="#youtube"><img src="assets/ui/buttons/youtube.png"></a>
+		</nav>
+</header>
 
     <div id="main-container"> 
         <img src="assets/images/logo.png" alt="" width="200" height="51" class="logo"/>
-		
-		<header class="header-mobile">
-			<div class="header-container">
-				<img src="assets/images/logo.png" class="logo-hamburguesa" alt="Logo">
-
-				<button class="hamburger" onclick="toggleMenu()">
-					<span></span>
-					<span></span>
-					<span></span>
-				</button>
-			</div>
-
-			<nav class="nav-links" id="mobile-nav">
-				<a href="#inicio">INICIO</a>
-				<a href="#tienda">TIENDA</a>
-				<a href="#discord">DISCORD</a>
-				<a href="#instagram">INSTAGRAM</a>
-				<a href="#youtube">YOUTUBE</a>
-			</nav>
-		</header>
         
         <div class="menu_top">
             <a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('inicio','','assets/ui/buttons/inicio_.png',1)"><img src="assets/ui/buttons/inicio.png" alt="" width="83" height="25" id="inicio"></a>
