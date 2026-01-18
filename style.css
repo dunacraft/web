@@ -17,6 +17,7 @@ body {
     overflow-x: hidden;
     background-color: black;
     min-height: 100vh;
+    filter: contrast(0.9) brightness(1.0) saturate(1) !important;
 }
 
 #main-container {
@@ -27,9 +28,8 @@ body {
 	height: 1500px;
 	overflow: hidden;
 	outline: 0px solid red;
+	filter: contrast(.98) brightness(1.1) saturate(1.7) !important;
 	background: transparent !important;
-	z-index: 999999 !important;
-	filter: contrast(0.9) brightness(1.0) saturate(1.8) !important;
 }
 
 .logo {
@@ -83,18 +83,18 @@ body {
 }
 
 .ip_copy {
-    position: fixed !important;
-    bottom: 30px !important;
-    right: 30px !important;
-    border-radius: 20px;
-    z-index: 999999 !important; /* Un nivel muy alto para que siempre esté arriba */
-    opacity: 0; /* Cambiado de 100 a 0 para que nazca invisible */
-    pointer-events: none;
-    transition: opacity 1s ease; /* Transición suave de entrada/salida */
+	position: fixed !important;
+	bottom: 30px !important;
+	left: auto !important;
+	right: 30px !important;
+	border-radius: 20px;
+	z-index: 99999 !important;
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity 1s ease;
 }
 
-/* Esta es la clase que el JavaScript activará */
-.ip_copy.mostrar-mensaje {
+.mostrar-mensaje {
     opacity: 1 !important;
 }
 
@@ -244,26 +244,22 @@ body {
     color: #ffffff; 
     font-weight: bold;
 }
+@media (max-width: 1440px){
+}
 
-@media (max-width: 1480px) {
+@media (max-width: 1280px) {
     #main-container {
-        /* 1. Reseteamos márgenes y posicionamiento */
-        margin-left: 50% !important;
-        transform: translateX(-50%) scale(0.85) !important;
-        transform-origin: top center !important;
-        
-        /* 2. Forzamos el ancho para que no dependa de porcentajes calculados */
-        width: 1440px !important; /* El ancho original de tu diseño */
-        max-width: none !important;
-        
-        /* 3. Limpieza de reglas previas */
-        left: auto !important;
-        right: auto !important;
-        display: block !important;
+        left: 0 !important;
+        margin: 0 auto !important;
+        transform: scale(0.85);
+        transform-origin: top left;
+        width: 117.6% !important; /* Proporción exacta para 0.85 */
+        margin-left: 2.2% !important; 
+	    outline: 0px solid red;
     }
     
     body {
-        overflow-x: hidden !important;
-        height: auto !important;
+	overflow-x: hidden;
+	height: 1279px !important; /* Dejamos que el navegador calcule la altura real */
     }
 }
