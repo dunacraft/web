@@ -161,32 +161,32 @@ body {
 	-webkit-user-drag: none;
 }
 
+/* RECURSOS - 4 EN LÍNEA (ESTILO ORIGINAL) */
 .recursos_image {
-    width: 352px;
-    height: 237px;
-    top: 190px;
-	left: 1%;
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    gap: 0px;
-    align-items: center;
+    position: absolute !important;
+    top: 240px !important; 
+    left: 0 !important;
+    width: 100% !important; 
+    display: flex !important;
+    flex-wrap: nowrap !important; /* Forzamos una sola línea */
+    justify-content: center !important; 
+    gap: 8px !important; /* Espacio reducido para que quepan todos */
+    padding: 0 !important;
 }
 
-.marco-zoom {
-    width: 200px;
-    height: 200px;
-    overflow: hidden; 
-    display: inline-block;
+.recursos_image a, .recursos_image .marco-zoom {
+    width: 82px !important; /* Tamaño calculado para que 4 entren en 380px */
+    height: 82px !important;
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
 }
 
-.img-transicion {
-    transition: transform 0.4s ease !important;
-    display: block;
-}
-
-.marco-zoom:hover .img-transicion {
-    transform: scale(1.15);
+.recursos_image img, .img-transicion {
+    width: 100% !important; 
+    height: auto !important;
+    transition: none !important; 
+    transform: none !important;
 }
 
 .novedades_title {
