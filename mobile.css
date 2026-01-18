@@ -1,0 +1,309 @@
+/* Dunacraft | MOBILE BOSS BATTLE */
+
+img {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+    -ms-interpolation-mode: nearest-neighbor;
+}
+
+body {
+	background-image: linear-gradient(325deg,rgba(3,3,17,1.00) 0.00%,rgba(2,7,5,1.00) 47.05%,rgba(3,23,16,1.00) 100%);
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+	background-color: black;
+	min-height: 100vh;
+}
+
+#main-container {
+    width: 360px !important; 
+    height: 3000px !important;
+    position: relative !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    left: 0 !important;
+    right: 0 !important;
+    /*overflow: hidden !important;*/ 
+    transform: none !important; 
+    outline: 1px solid red;
+}
+
+.filtro-visual {
+	filter: contrast(.98) brightness(1.1) saturate(1.7);
+	min-height: 100vh;
+	width: 100%;
+	height: 100%;
+}
+
+.overlay-color {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(54,58,63,0.20);
+    position: fixed;
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    z-index: 5;
+}
+
+.logo {
+    position: absolute;
+    top: 82px;
+    left: 105px;
+    width: 260px;
+    height: 66px;
+	user-select: none;
+	pointer-events: none;
+	-webkit-user-drag: none;
+    display: none !important;
+}
+
+.menu_top {
+    position: relative !important;
+    top: -4px !important;
+    
+    /* 1. Fondo negro al 50% */
+    background-color: rgba(0, 0, 0, 0.5) !important;
+    
+    /* 2. Extender de lado a lado ignorando al padre */
+    width: 500px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important; /* Centra el bloque de 100vw respecto a la pantalla */
+    
+    /* 3. Mantener botones centrados */
+    display: flex !important;
+    justify-content: center; 
+    flex-wrap: wrap;  
+    gap: 10px; 
+    height: 10px !important;
+    padding: 10px 0; /* Espacio interno para que el fondo no pegue a los botones */
+    outline: 1px solid red;	
+}
+
+.menu_top a img {
+    width: auto;  
+    height: 14px !important; 
+}
+
+.menu_top a img {
+    pointer-events: none !important; 
+    transition: none !important;    
+    transform: none !important;      
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+.menu_top a:hover, .menu_top a:active {
+    background: none !important;
+    transform: none !important;
+    outline: none !important;
+}
+
+.banner {
+    width: 95% !important;
+    height: auto !important; 
+    position: absolute;
+    top: 40px;
+    left: 2.8%;
+	user-select: none;
+	pointer-events: none;
+	-webkit-user-drag: none;
+	outline: 0px solid red;
+}
+
+.boton_ip {
+    position: relative !important;
+    top: 115px !important;
+    left: 35.7% !important;
+    display: inline-block !important; 
+    margin: 0 !important; 
+    width: fit-content;
+}
+
+#img_ip {
+    width: 60px !important; 
+    height: auto !important;
+    transition: none !important;
+    transform: none !important;
+    user-select: none;
+    -webkit-user-drag: none;
+}
+
+.boton_ip:hover #img_ip {
+    transform: none !important;
+    transition: none !important;
+}
+
+.ip_copy {
+	position: fixed !important;
+	bottom: 30px !important;
+	left: auto !important;
+	right: 30px !important;
+	border-radius: 20px;
+	z-index: 99999 !important;
+	opacity: 0;
+	pointer-events: none;
+	transition: opacity 1s ease;
+}
+
+.mostrar-mensaje {
+    opacity: 1 !important;
+}
+
+.recursos_title {
+	width: 360px !important; 
+    height: auto !important;
+    position: absolute;
+    top: 190px;
+    left: -0.4%;
+	user-select: none;
+	pointer-events: none;
+	-webkit-user-drag: none;
+}
+
+/* RECURSOS - CUADRÍCULA ESTÁTICA 2x2 */
+.recursos_image {
+    position: absolute !important;
+    top: 220px !important; 
+    left: 0 !important;
+    width: 100% !important; 
+    height: auto !important;
+    display: flex !important;
+    flex-wrap: wrap !important;
+    justify-content: center !important; 
+    gap: 20px !important;
+    padding: 0 !important;
+}
+
+/* 1. Eliminamos el comportamiento de "marco" y efectos */
+.recursos_image .marco-zoom {
+    width: 140px !important;  
+    height: 140px !important;
+    position: relative !important;
+    top: auto !important;
+    left: auto !important;
+    margin: 0 !important;
+    overflow: hidden !important;
+    /* Eliminamos cualquier sombra o efecto que pueda venir de PC */
+    box-shadow: none !important;
+    border: none !important;
+}
+
+/* 2. Imagen totalmente plana y estática */
+.recursos_image a img, 
+.img-transicion {
+    width: 100% !important;   
+    height: auto !important;
+    /* Matamos cualquier transición de escala o movimiento */
+    transition: none !important;
+    transform: none !important;
+    filter: none !important;
+    pointer-events: auto !important; /* El click sigue funcionando */
+}
+
+/* 3. Bloqueo total de Hover y Estados Activos */
+.marco-zoom:hover .img-transicion,
+.recursos_image a:hover img,
+.recursos_image a:active img {
+    transform: none !important;
+    transition: none !important;
+    filter: none !important;
+    opacity: 1 !important; /* Evita que se ponga transparente al tocar */
+}
+
+.novedades_title {
+	position: absolute;
+	top: 1083px;
+	left: 108px;
+	user-select: none;
+	pointer-events: none;
+	-webkit-user-drag: none;
+}
+
+.novedades {
+	width: 863px;
+	height: 176px;
+	top: 1150px;
+	position: absolute;
+	left: 116px;
+	border-radius: 20px;
+	border: 2px solid #857E7E;
+	overflow: hidden;
+	position: relative;
+	gap: 20px;
+}
+
+.novedades_cont {
+	width: 564px;
+	height: 155px;
+	position: absolute;
+	top: 10px;
+	left: 286px;
+	color: #FFFFFF;
+	font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
+	overflow-y: auto;
+	padding-right: 10px;
+}
+
+.entrada-noticia {
+    margin-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    padding-bottom: 10px;
+}
+
+.entrada-noticia h3 {
+    color: #ffffff;
+    font-size: 1.3rem;
+    font-weight: bold;
+    margin: 0 0 5px 0;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.5);
+}
+
+.entrada-noticia p {
+	color: #cccccc;
+	font-size: 1rem;
+	font-weight: normal;
+	line-height: 1.4;
+	margin: 0;
+	text-align: justify;
+	width: 544px;
+}
+
+.novedades_cont::-webkit-scrollbar {
+    width: 8px;
+}
+
+.novedades_cont::-webkit-scrollbar-thumb {
+    background: #a8a8a8;
+    border-radius: 15px;
+}
+
+.banner_1 {
+	width: 270px;
+	height: 557px;
+	position: absolute;
+	top: 769px;
+	left: 1058px;
+	border: 2px solid #A8A8A8;
+	border-radius: 20px;
+	user-select: none;
+	pointer-events: none;
+	-webkit-user-drag: none;
+}
+	
+.boton_votar {
+	top: 1137px;
+	left: 1075px;
+	position: absolute;
+}
+	
+.footer_duna {
+	width: 1300px; 
+	height: 60px;
+	position: absolute;
+	top: 1400px; 
+	left: 70px;
+	text-align: center;
+	padding: 13px 0;
+	border-top: 1px solid rgba(133, 126, 126, 0.3);
+}
