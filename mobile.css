@@ -62,9 +62,8 @@ body {
 .menu_top { display: none !important; }
 
 /* HEADER PRINCIPAL */
-/* HEADER PRINCIPAL */
 .header-mobile {
-    position: relative; /* Cambiado de fixed para que el flujo sea natural */
+    position: relative !important; /* Para que empuje el contenido hacia abajo */
     width: 100%;
     background-color: rgba(0, 0, 0, 0.9);
     z-index: 10000;
@@ -73,49 +72,81 @@ body {
 
 .header-container {
     display: flex;
-    justify-content: flex-start; /* Alinea todo a la izquierda */
+    justify-content: flex-start !important; /* Alinea al inicio (izquierda) */
     align-items: center;
-    padding: 10px 15px;
+    padding: 5px 20px;
     gap: 15px; /* Espacio entre hamburguesa y logo */
 }
 
-.logo-hamburguesa {
-    height: 30px; /* Ajusta al tamaño de tu logo */
-    width: auto;
+/* BOTÓN HAMBURGUESA - REPARACIÓN DE LÍNEAS */
+.hamburger {
+    background: none !important;
+    border: none !important;
+    padding: 0 !important;
+    cursor: pointer;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    width: 23px !important;
+    height: 18px !important; /* Altura total del bloque de 3 líneas */
 }
 
-/* MENÚ QUE EMPUJA EL CONTENIDO */
+.hamburger span {
+    display: block !important;
+    width: 100% !important;
+    height: 3px !important; /* Grosor de cada línea */
+    background-color: #ffffff !important;
+    border-radius: 2px;
+}
+
+/* LOGO */
+.logo-hamburguesa {
+    height: 30px !important; /* Tamaño similar al de la captura DiosesMC */
+    width: auto !important;
+	margin-top: 4px !important; /* Ajusta este número (2px, 4px, 6px) hasta que lo veas perfecto */
+    position: relative !important;
+}
+
+/* MENÚ DESPLEGABLE */
 .nav-links {
-    display: none; /* Se controla con la clase .active */
+    display: none; 
     flex-direction: column;
-    background-color: #111; /* Color oscuro sólido como DiosesMC */
     width: 100%;
-    border-bottom: 2px solid #857E7E;
+    
+    /* 1. Fondo negro con 80% de opacidad */
+    background-color: rgba(17, 17, 17, 0.0) !important; 
+    
+    /* 2. Efecto de desenfoque (opcional, estilo iOS/moderno) */
+    backdrop-filter: blur(10px); 
+    -webkit-backdrop-filter: blur(10px);
+    
+    border-bottom: 1px solid rgba(133, 126, 126, 0.5);
 }
 
 .nav-links.active {
-    display: flex; /* Al activarse, empuja lo que esté abajo */
+    display: flex !important; /* Se activa con JS y empuja lo de abajo */
 }
 
-/* ENLACES CON TUS IMÁGENES */
 .nav-links a {
-    display: flex;
-    align-items: center;
-    padding: 12px 20px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-    text-decoration: none;
+	padding: 4px 25px;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.00);
+	border-top: 1px solid rgba(255,255,255,0.09);
+	position: relative;
+	top: -1px;
 }
 
 .nav-links a img {
-    height: 18px; /* Tamaño de tus imágenes de menú */
-    width: auto;
+    height: 20px !important;
+    width: auto !important;
+    position: relative !important;
+    top: 2px
 }
 
 .banner {
     width: 95% !important;
     height: auto !important; 
     position: absolute;
-    top: 60px;
+    top: 20px;
     left: 2.8%;
 	user-select: none;
 	pointer-events: none;
@@ -125,7 +156,7 @@ body {
 
 .boton_ip {
     position: relative !important;
-    top: 165px !important;
+    top: 125px !important;
     left: 35.7% !important;
     display: inline-block !important; 
     margin: 0 !important; 
@@ -166,7 +197,7 @@ body {
 	width: 360px !important; 
     height: auto !important;
     position: absolute;
-    top: 210px;
+    top: 170px;
     left: -0.4%;
 	user-select: none;
 	pointer-events: none;
@@ -176,7 +207,7 @@ body {
 /* RECURSOS - 4 EN LÍNEA (ESTILO ORIGINAL) */
 .recursos_image {
     position: absolute !important;
-    top: 240px !important; 
+    top: 200px !important; 
     left: -.6% !important;
     width: 100% !important; 
     display: flex !important;
@@ -225,6 +256,63 @@ body {
     background: none !important;
 }
 
+.novedades_title {
+	width: 163px;
+	height: auto;
+	position: absolute;
+	top: 330px;
+	left: 9.3%;
+	user-select: none;
+	pointer-events: none;
+	-webkit-user-drag: none;
+}
+
+.novedades {
+    /* Mantenemos tus medidas y posición, pero activamos el flujo vertical */
+    width: 86% !important; /* Ajustado para tu caja de 380px */
+    max-width: 330px !important;
+    height: auto !important; /* Altura automática para que crezca con el contenido */
+    position: absolute !important;
+    top: 310px !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    
+    display: flex !important;
+    flex-direction: column !important; /* Imagen arriba, texto abajo */
+    align-items: center !important;
+    gap: 15px !important;
+    padding: 15px !important;
+	padding-top: 50px !important;
+	overflow: hidden !important; /* Esto recorta las esquinas de la imagen */
+    border-radius: 20px;
+    border: 2px solid #857E7E;
+    overflow: hidden;
+}
+
+.novedades_cont {
+    /* Quitamos el absolute para que el texto baje y se acomode solo */
+    position: relative !important; 
+    top: 0 !important;
+    left: 0 !important;
+    width: 90% !important; /* Ocupa todo el ancho de la caja gris */
+    height: 130px !important; /* Altura fija para el scroll de noticias */
+    overflow-y: auto;
+    color: #FFFFFF;
+    font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
+}
+
+.entrada-noticia p {
+    font-size: 0.95rem !important; /* Estaba en 1rem, esto la hace más fina */
+    line-height: 1.1 !important;
+    color: #cccccc !important;
+    width: 100% !important; /* Reducimos un poco el ancho para dar aire al scroll */
+    text-align: justify;
+}
+
+.novedades img[src*="news.png"] {
+    display: none !important;
+}
+
 .banner_1 {
 	width: 330px;
 	height: auto;
@@ -250,61 +338,6 @@ img[src*="banner_vert"] {
 	top: 1793px;
 	left: 16%;
 	position: absolute;
-}
-
-.novedades_title {
-	width: 163px;
-	height: auto;
-	position: absolute;
-	top: 368px;
-	left: 9.3%;
-	user-select: none;
-	pointer-events: none;
-	-webkit-user-drag: none;
-}
-
-.novedades {
-    /* Mantenemos tus medidas y posición, pero activamos el flujo vertical */
-    width: 86% !important; /* Ajustado para tu caja de 380px */
-    max-width: 330px !important;
-    height: auto !important; /* Altura automática para que crezca con el contenido */
-    position: absolute !important;
-    top: 350px !important;
-    left: 50% !important;
-    transform: translateX(-50%) !important;
-    
-    display: flex !important;
-    flex-direction: column !important; /* Imagen arriba, texto abajo */
-    align-items: center !important;
-    gap: 15px !important;
-    padding: 15px !important;
-	padding-top: 50px !important;
-	overflow: hidden !important; /* Esto recorta las esquinas de la imagen */
-    border-radius: 20px;
-    border: 2px solid #857E7E;
-    overflow: hidden;
-}
-
-.novedades_cont {
-    /* Quitamos el absolute para que el texto baje y se acomode solo */
-    position: relative !important; 
-    top: 0 !important;
-    left: 0 !important;
-    width: 90% !important; /* Ocupa todo el ancho de la caja gris */
-    height: 240px !important; /* Altura fija para el scroll de noticias */
-    overflow-y: auto;
-    color: #FFFFFF;
-    font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
-}
-
-.entrada-noticia p {
-    /* Ajustamos el ancho del párrafo para que no se desborde del móvil */
-    width: 100% !important;
-    text-align: justify;
-}
-
-.novedades img[src*="news.png"] {
-    display: none !important;
 }
 	
 .footer_duna {
