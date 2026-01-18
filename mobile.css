@@ -32,7 +32,7 @@ body {
 	filter: contrast(.98) brightness(1.1) saturate(1.7);
 	min-height: 100vh;
 	width: 100%;
-	height: 100%;
+	height: 2000px;
 }
 
 .overlay-color {
@@ -165,7 +165,7 @@ body {
 .recursos_image {
     position: absolute !important;
     top: 240px !important; 
-    left: 0 !important;
+    left: -.6% !important;
     width: 100% !important; 
     display: flex !important;
     flex-wrap: nowrap !important; /* Forzamos una sola línea */
@@ -213,11 +213,38 @@ body {
     background: none !important;
 }
 
+.banner_1 {
+	width: 330px;
+	height: auto;
+	position: absolute;
+	top: 349px;
+	left: 3.3%;
+	border: 2px solid #A8A8A8;
+	border-radius: 20px;
+	user-select: none;
+	pointer-events: none;
+	-webkit-user-drag: none;
+}
+
+img[src*="banner_vert"] {
+    width: 320px !important; /* Ajusta este valor según lo grande que lo quieras */
+    height: auto !important;
+    display: block !important;
+    margin: 0 auto !important; /* Lo centra horizontalmente */
+    position: relative !important;
+}
+	
+.boton_votar {
+	top: 793px;
+	left: 16%;
+	position: absolute;
+}
+
 .novedades_title {
 	width: 163px;
 	height: auto;
 	position: absolute;
-	top: 353px;
+	top: 1060px;
 	left: 3.3%;
 	user-select: none;
 	pointer-events: none;
@@ -230,7 +257,7 @@ body {
     max-width: 330px !important;
     height: auto !important; /* Altura automática para que crezca con el contenido */
     position: absolute !important;
-    top: 390px !important;
+    top: 1110px !important;
     left: 50% !important;
     transform: translateX(-50%) !important;
     
@@ -239,7 +266,8 @@ body {
     align-items: center !important;
     gap: 15px !important;
     padding: 15px !important;
-    
+	padding-top: 0 !important;
+	overflow: hidden !important; /* Esto recorta las esquinas de la imagen */
     border-radius: 20px;
     border: 2px solid #857E7E;
     overflow: hidden;
@@ -248,10 +276,10 @@ body {
 .novedades_cont {
     /* Quitamos el absolute para que el texto baje y se acomode solo */
     position: relative !important; 
-    top: 10 !important;
+    top: 0 !important;
     left: 0 !important;
     width: 90% !important; /* Ocupa todo el ancho de la caja gris */
-    height: 200px !important; /* Altura fija para el scroll de noticias */
+    height: 240px !important; /* Altura fija para el scroll de noticias */
     overflow-y: auto;
     color: #FFFFFF;
     font-family: "Gill Sans", "Gill Sans MT", "Myriad Pro", "DejaVu Sans Condensed", Helvetica, Arial, sans-serif;
@@ -264,28 +292,9 @@ body {
 }
 
 .novedades img[src*="news.png"] {
-    width: 110% !important; /* Ajusta este % para el tamaño que desees */
+    width: 113% !important; /* Ajusta este % para el tamaño que desees */
     height: auto !important;
     display: block !important;
-}
-
-.banner_1 {
-	width: 270px;
-	height: 557px;
-	position: absolute;
-	top: 769px;
-	left: 1058px;
-	border: 2px solid #A8A8A8;
-	border-radius: 20px;
-	user-select: none;
-	pointer-events: none;
-	-webkit-user-drag: none;
-}
-	
-.boton_votar {
-	top: 1137px;
-	left: 1075px;
-	position: absolute;
 }
 	
 .footer_duna {
