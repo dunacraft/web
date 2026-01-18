@@ -211,7 +211,7 @@ body {
 
 .ip_copy {
 	position: fixed !important;
-	bottom: 5% !important; /* Centrado vertical absoluto */
+	bottom: -3% !important; /* Centrado vertical absoluto */
     left: 50% !important; /* Centrado horizontal absoluto */
 	border-radius: 20px;
 	z-index: 99999 !important;
