@@ -64,11 +64,11 @@ body {
 
 /* HEADER PRINCIPAL */
 .header-mobile {
-    position: relative !important; /* Para que empuje el contenido hacia abajo */
-    width: 100%;
-    background-color: rgba(0, 0, 0, 0.9);
-    z-index: 10000;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+	position: relative !important; /* Para que empuje el contenido hacia abajo */
+	width: 100%;
+	background-color: rgba(10,10,10,1.00);
+	z-index: 10000;
+	border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
 .header-container {
@@ -110,18 +110,21 @@ body {
 
 /* MENÚ DESPLEGABLE */
 .nav-links {
-    display: none; 
-    flex-direction: column;
-    width: 100%;
-    
-    /* 1. Fondo negro con 80% de opacidad */
-    background-color: rgba(17, 17, 17, 0.0) !important; 
-    
-    /* 2. Efecto de desenfoque (opcional, estilo iOS/moderno) */
-    backdrop-filter: blur(10px); 
-    -webkit-backdrop-filter: blur(10px);
-    
-    border-bottom: 1px solid rgba(133, 126, 126, 0.5);
+	display: none;
+	flex-direction: column;
+	width: 100%;
+	background-color: rgba(0,0,0,0.05) !important;
+	backdrop-filter: blur(10px);
+	-webkit-backdrop-filter: blur(10px);
+	border-bottom: 1px solid rgba(133, 126, 126, 0.5);
+}
+
+#mobile-nav {
+	/* Creamos el fondo grisáceo suave y bordes redondeados */
+	background: rgba(255, 255, 255, 0.03) !important;
+	border: 1px solid rgba(255, 255, 255, 0.08) !important;
+	border-radius: 0px !important;
+	padding: 8px !important;
 }
 
 .nav-links.active {
@@ -129,9 +132,9 @@ body {
 }
 
 .nav-links a {
-	padding: 4px 25px;
+	padding: 10px 25px;
 	border-bottom: 1px solid rgba(255, 255, 255, 0.00);
-	border-top: 1px solid rgba(255,255,255,0.09);
+	border-top: 0px solid rgba(255,255,255,0.09);
 	position: relative;
 	top: -1px;
 }
@@ -141,6 +144,33 @@ body {
     width: auto !important;
     position: relative !important;
     top: 2px
+}
+
+/* LA CAJA INTERNA (Estilo DiosesMC) */
+.menu-box {
+	background: rgba(255, 255, 255, 0.04) !important; /* Fondo sutil */
+	border: 1px solid rgba(255, 255, 255, 0.1) !important; /* Borde fino */
+	border-radius: 15px !important; /* Bordes redondeados */
+	padding: 10px !important;
+	display: flex;
+	flex-direction: column;
+	gap: 5px; /* Espacio entre botones */
+	width: 82%;
+	position: relative;
+	left: 3%;
+}
+
+/* Estilo de los enlaces/imágenes */
+.menu-box a {
+    display: flex;
+    justify-content: flex-start;
+    padding: 3px !important;
+    width: 97%;
+}
+
+.menu-box a img {
+    height: 25px; /* Tamaño controlado de tus botones */
+    width: auto;
 }
 
 .banner {
