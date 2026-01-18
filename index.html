@@ -57,104 +57,46 @@ function toggleMenu() {
 </script>
 </head>
 
-<body onLoad="MM_preloadImages('assets/ui/buttons/boton_jugar.png','assets/images/recursos_image/wiki.png','assets/images/recursos_image/reglamento.png','assets/images/recursos_image/cronicas.png','assets/images/recursos_image/modpack.png','assets/ui/buttons/boton_youtube2.png','assets/ui/buttons/boton_instagram2.png','assets/ui/buttons/boton_tienda2.png','assets/ui/buttons/boton_inicio2.png','assets/ui/buttons/boton_discord_2.png','assets/ui/buttons/boton_votar.png')">
-
-<div class="filtro-visual">
-    <div class="overlay-color"></div>
-	
-	<header class="header-mobile">
-		<div class="header-container">
-			<button class="hamburger" onclick="toggleMenu()">
-				<span></span>
-				<span></span>
-				<span></span>
-			</button>
-
-			<img src="assets/images/logo.png" class="logo-hamburguesa" alt="Logo">
-		</div>
-
-		<nav class="nav-links" id="mobile-nav">
-			<a href="#inicio"><img src="assets/ui/buttons/inicio.png"></a>
-			<a href="#tienda"><img src="assets/ui/buttons/tienda.png"></a>
-			<a href="#discord"><img src="assets/ui/buttons/discord.png"></a>
-			<a href="#instagram"><img src="assets/ui/buttons/instagram.png"></a>
-			<a href="#youtube"><img src="assets/ui/buttons/youtube.png"></a>
-		</nav>
-	</header>
-
-    <div id="main-container"> 
-        <img src="assets/images/logo.png" alt="" width="200" height="51" class="logo"/>
-        
-        <div class="menu_top">
-            <a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('inicio','','assets/ui/buttons/inicio_.png',1)"><img src="assets/ui/buttons/inicio.png" alt="" width="83" height="25" id="inicio"></a>
-            <a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('tienda','','assets/ui/buttons/tienda_.png',1)"><img src="assets/ui/buttons/tienda.png" alt="" width="94" height="25" id="tienda"></a> 
-            <a href="https://discord.gg/Xc39XEyR" target="_blank" onMouseOver="MM_swapImage('discord','','assets/ui/buttons/discord_.png',1)" onMouseOut="MM_swapImgRestore()"><img src="assets/ui/buttons/discord.png" alt="" width="103" height="25" id="discord"></a>
-            <a href="https://www.instagram.com/dunacraft_/" target="_blank" onMouseOver="MM_swapImage('instagram','','assets/ui/buttons/instagram_.png',1)" onMouseOut="MM_swapImgRestore()"><img src="assets/ui/buttons/instagram.png" alt="" width="125" height="25" id="instagram"></a>
-            <a href="https://www.youtube.com/@Dunacraft" target="_blank" onMouseOver="MM_swapImage('youtube','','assets/ui/buttons/youtube_.png',1)" onMouseOut="MM_swapImgRestore()"><img src="assets/ui/buttons/youtube.png" alt="" width="108" height="25" id="youtube"></a>
-        </div>
-
-        <img src="assets/images/banner.png" alt="" width="1300" height="678" class="banner"/>
-        
-        <div class="banner_1"><img src="assets/images/banner_vert.png" alt="" width="270" height="557" class="banner_image1"/>&nbsp;</div>
-		<img src="assets/ui/titles/votar_title.png" class="votar_title" alt="">
-      <a href="#" class="boton_votar" onMouseOver="MM_swapImage('boton_votar','','assets/ui/buttons/boton_votar.png',1)" onMouseOut="MM_swapImgRestore()"><img src="assets/ui/buttons/boton_votar.png" alt="" width="238" height="82" id="boton_votar"></a><a href="#" class="boton_ip" onMouseOver="MM_swapImage('img_jugar','','assets/ui/buttons/boton_ip.png',1)" onMouseOut="MM_swapImgRestore()"> <img src="assets/ui/buttons/boton_ip.png" alt="" width="185" height="63" id="img_ip"> </a><img src="assets/ui/titles/recursos_title.png" alt="" width="952" height="55" class="recursos_title"/><img src="assets/ui/titles/novedades_title.png" alt="" width="297" height="45" class="novedades_title"/>
-      
-        <div class="recursos_image">
-            <div class="marco-zoom">
-                <a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('wiki','','assets/images/recursos_image/wiki_.png',1)">
-                    <img src="assets/images/recursos_image/wiki.png" alt="" width="200" height="200" id="wiki" class="img-transicion">
-                </a>
-            </div>
-            
-            <div class="marco-zoom">
-                <a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('reglamento','','assets/images/recursos_image/reglamento_.png',1)">
-                    <img src="assets/images/recursos_image/reglamento.png" alt="" width="200" height="200" id="reglamento" class="img-transicion">
-                </a>
-            </div>
-            
-            <div class="marco-zoom">
-                <a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('cronicas','','assets/images/recursos_image/cronicas_.png',1)">
-                    <img src="assets/images/recursos_image/cronicas.png" alt="" width="200" height="200" id="cronicas" class="img-transicion">
-                </a>
-            </div>
-            
-            <div class="marco-zoom">
-                <a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('modpack','','assets/images/recursos_image/modpack_.png',1)">
-                    <img src="assets/images/recursos_image/modpack.png" alt="" width="200" height="200" id="modpack" class="img-transicion">
-                </a>
-            </div>
-        </div>
-        <div class="novedades">
-            <img src="assets/images/news.png" width="266" height="178" alt="News" class="news-icon"/>
-            
-            <div class="novedades_cont">
-
-                <div class="entrada-noticia">
-                    <h3>Mercado</h3>
-                    <p>Nueva zona disponible donde podrás encontrar una gran variedad de tradeos que mejoraran tu experiencia de juego en el servidor.</p>
-                </div>
-                
-                <div class="entrada-noticia">
-                    <h3>Sistema de Skills</h3>
-                    <p>Se agregó un sistema de Skills con el que podrás mejorar considerablemente tus habilidades de minería y combate.</p>
-                </div>
-
-                <div class="entrada-noticia">
-                    <h3>Zona de Cajas</h3>
-                    <p>Se actualizó por completo el sistema de recompensas en las cajas, 
-                        accede a esta zona utilizando /warps cajas.</p>
-                </div>
-
-            </div>
-        </div>
-        <div class="footer_duna">
-            <p class="footer_text">
-                © 2026 <span>Dunacraft</span>. Todos los derechos reservados.<br>
-                Terminos y Condiciones • Politica de Privacidad
-            </p>
-        </div>
+<body onLoad="MM_preloadImages('assets/ui/buttons/boton_jugar.png','assets/images/recursos_image/wiki.png','assets/images/recursos_image/reglamento.png','assets/images/recursos_image/cronicas.png','assets/images/recursos_image/modpack.png','assets/ui/buttons/boton_youtube2.png','assets/ui/buttons/boton_instagram2.png','assets/ui/buttons/boton_tienda2.png','assets/ui/buttons/boton_inicio2.png','assets/ui/buttons/boton_discord_2.png','assets/ui/buttons/boton_votar.png','assets/ui/buttons/inicio_.png','assets/ui/buttons/tienda_.png','assets/ui/buttons/discord_.png','assets/ui/buttons/instagram_.png','assets/ui/buttons/youtube_.png','assets/images/recursos_image/wiki_.png','assets/images/recursos_image/reglamento_.png','assets/images/recursos_image/cronicas_.png','assets/images/recursos_image/modpack_.png')">
+<header class="header-mobile">
+  <div class="header-container">
+    <button class="hamburger" onclick="toggleMenu()"> <span></span> <span></span> <span></span> </button>
+  <img src="assets/images/logo.png" class="logo-hamburguesa" alt="Logo"> </div>
+  <nav class="nav-links" id="mobile-nav"> <a href="#inicio"><img src="assets/ui/buttons/inicio.png"></a> <a href="#tienda"><img src="assets/ui/buttons/tienda.png"></a> <a href="#discord"><img src="assets/ui/buttons/discord.png"></a> <a href="#instagram"><img src="assets/ui/buttons/instagram.png"></a> <a href="#youtube"><img src="assets/ui/buttons/youtube.png"></a> </nav>
+</header>
+<div id="main-container"> <img src="assets/images/logo.png" alt="" width="200" height="51" class="logo"/>
+  <div class="menu_top"> <a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('inicio','','assets/ui/buttons/inicio_.png',1)"><img src="assets/ui/buttons/inicio.png" alt="" width="83" height="25" id="inicio"></a> <a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('tienda','','assets/ui/buttons/tienda_.png',1)"><img src="assets/ui/buttons/tienda.png" alt="" width="94" height="25" id="tienda"></a> <a href="https://discord.gg/Xc39XEyR" target="_blank" onMouseOver="MM_swapImage('discord','','assets/ui/buttons/discord_.png',1)" onMouseOut="MM_swapImgRestore()"><img src="assets/ui/buttons/discord.png" alt="" width="103" height="25" id="discord"></a> <a href="https://www.instagram.com/dunacraft_/" target="_blank" onMouseOver="MM_swapImage('instagram','','assets/ui/buttons/instagram_.png',1)" onMouseOut="MM_swapImgRestore()"><img src="assets/ui/buttons/instagram.png" alt="" width="125" height="25" id="instagram"></a> <a href="https://www.youtube.com/@Dunacraft" target="_blank" onMouseOver="MM_swapImage('youtube','','assets/ui/buttons/youtube_.png',1)" onMouseOut="MM_swapImgRestore()"><img src="assets/ui/buttons/youtube.png" alt="" width="108" height="25" id="youtube"></a> </div>
+  <img src="assets/images/banner.png" alt="" width="1300" height="678" class="banner"/>
+  <div class="banner_1"><img src="assets/images/banner_vert.png" alt="" width="270" height="557" class="banner_image1"/>&nbsp;</div>
+  <img src="assets/ui/titles/votar_title.png" class="votar_title" alt=""> <a href="#" class="boton_votar" onMouseOver="MM_swapImage('boton_votar','','assets/ui/buttons/boton_votar.png',1)" onMouseOut="MM_swapImgRestore()"><img src="assets/ui/buttons/boton_votar.png" alt="" width="238" height="82" id="boton_votar"></a><a href="#" class="boton_ip" onMouseOver="MM_swapImage('img_jugar','','assets/ui/buttons/boton_ip.png',1)" onMouseOut="MM_swapImgRestore()"> <img src="assets/ui/buttons/boton_ip.png" alt="" width="185" height="63" id="img_ip"></a><img src="assets/ui/titles/recursos_title.png" alt="" width="952" height="55" class="recursos_title"/><img src="assets/ui/titles/novedades_title.png" alt="" width="297" height="45" class="novedades_title"/>
+  <div class="recursos_image">
+    <div class="marco-zoom"> <a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('wiki','','assets/images/recursos_image/wiki_.png',1)"> <img src="assets/images/recursos_image/wiki.png" alt="" width="200" height="200" id="wiki" class="img-transicion"> </a> </div>
+    <div class="marco-zoom"> <a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('reglamento','','assets/images/recursos_image/reglamento_.png',1)"> <img src="assets/images/recursos_image/reglamento.png" alt="" width="200" height="200" id="reglamento" class="img-transicion"> </a> </div>
+    <div class="marco-zoom"> <a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('cronicas','','assets/images/recursos_image/cronicas_.png',1)"> <img src="assets/images/recursos_image/cronicas.png" alt="" width="200" height="200" id="cronicas" class="img-transicion"> </a> </div>
+    <div class="marco-zoom"> <a href="#" onMouseOut="MM_swapImgRestore()" onMouseOver="MM_swapImage('modpack','','assets/images/recursos_image/modpack_.png',1)"> <img src="assets/images/recursos_image/modpack.png" alt="" width="200" height="200" id="modpack" class="img-transicion"> </a> </div>
   </div>
-</div> 
+  <div class="novedades"> <img src="assets/images/news.png" width="266" height="178" alt="News" class="news-icon"/>
+    <div class="novedades_cont">
+      <div class="entrada-noticia">
+        <h3>Mercado</h3>
+        <p>Nueva zona disponible donde podrás encontrar una gran variedad de tradeos que mejoraran tu experiencia de juego en el servidor.</p>
+      </div>
+      <div class="entrada-noticia">
+        <h3>Sistema de Skills</h3>
+        <p>Se agregó un sistema de Skills con el que podrás mejorar considerablemente tus habilidades de minería y combate.</p>
+      </div>
+      <div class="entrada-noticia">
+        <h3>Zona de Cajas</h3>
+        <p>Se actualizó por completo el sistema de recompensas en las cajas, 
+          accede a esta zona utilizando /warps cajas.</p>
+      </div>
+    </div>
+  </div>
+  <div class="footer_duna">
+    <p class="footer_text"> © 2026 <span>Dunacraft</span>. Todos los derechos reservados.<br>
+      Terminos y Condiciones • Politica de Privacidad </p>
+  </div>
+</div>
 <img src="assets/images/ip_copy.png" alt="" width="400" height="77" class="ip_copy"/>
 
 </body>
