@@ -120,13 +120,15 @@ body {
 }
 
 #mobile-nav {
-	/* Creamos el fondo grisáceo suave y bordes redondeados */
-	background: rgba(255, 255, 255, 0.03) !important;
-	border: 1px solid rgba(255, 255, 255, 0.08) !important;
-	border-radius: 0px !important;
-	padding: 8px !important;
+    display: none; /* Se activa con .active */
+    flex-direction: column !important;
+    align-items: center !important; /* CENTRADO HORIZONTAL AUTOMÁTICO */
+    justify-content: center !important;
+    width: 100% !important;
+    background: rgba(255, 255, 255, 0.03) !important;
+    border: 1px solid rgba(255, 255, 255, 0.08) !important;
+    padding: 10px 0 !important; /* Damos un poco de aire arriba y abajo */
 }
-
 .nav-links.active {
     display: flex !important; /* Se activa con JS y empuja lo de abajo */
 }
@@ -146,18 +148,21 @@ body {
     top: 2px
 }
 
-/* LA CAJA INTERNA (Estilo DiosesMC) */
 .menu-box {
-	background: rgba(255, 255, 255, 0.04) !important; /* Fondo sutil */
-	border: 1px solid rgba(255, 255, 255, 0.1) !important; /* Borde fino */
-	border-radius: 15px !important; /* Bordes redondeados */
-	padding: 10px !important;
-	display: flex;
-	flex-direction: column;
-	gap: 5px; /* Espacio entre botones */
-	width: 82%;
-	position: relative;
-	left: 3%;
+    background: rgba(255, 255, 255, 0.04) !important;
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    border-radius: 15px !important;
+    padding: 10px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 5px !important;
+    
+    /* REESTRUCTURACIÓN DE CENTRADO */
+    width: 88% !important; /* Un ancho consistente */
+    position: relative !important;
+    left: 0 !important; /* Eliminamos el 50% anterior */
+    transform: none !important; /* Eliminamos el translateX anterior */
+    margin: 0 auto !important; /* Margen automático para seguridad extra */
 }
 
 /* Estilo de los enlaces/imágenes */
