@@ -7,13 +7,17 @@ img {
 }
 
 body {
-	background-image: linear-gradient(325deg,rgba(3,3,17,1.00) 0.00%,rgba(2,7,5,1.00) 47.05%,rgba(3,23,16,1.00) 100%);
-	margin: 0;
-	padding: 0;
-	overflow-x: hidden;
-	background-color: black;
-	min-height: 77.8vh;
-	filter: contrast(1) brightness(1.15) saturate(1.1) !important;
+    background-image: 
+        /* Capa nueva: Color sólido con 15% de opacidad */
+        linear-gradient(rgba(54, 58, 63, 0.23), rgba(54, 58, 63, 0.23)),
+        /* Tu gradiente original */
+        linear-gradient(325deg, rgba(3, 3, 17, 1.00) 0.00%, rgba(2, 7, 5, 1.00) 47.05%, rgba(3, 23, 16, 1.00) 100%);
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background-color: black;
+    min-height: 100vh;
+    filter: contrast(0.9) brightness(1.0) saturate(1) !important;
 }
 
 #main-container {
