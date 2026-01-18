@@ -20,19 +20,17 @@ body {
 }
 
 #main-container {
-    /* En lugar de 360px, usamos un porcentaje para que sea elástico */
-    width: 95% !important; 
-    /* Pero le ponemos un máximo para que no se estire infinito en tablets */
-    max-width: 550px !important; 
-    
-    height: auto !important; /* Permitimos que crezca hacia abajo */
+    width: 360px !important; 
+    height: 655px !important;
     position: relative !important;
-    margin: 0 auto !important; /* Esto mantiene el bloque centrado */
+    margin-left: auto !important;
+    margin-right: auto !important;
     left: 0 !important;
     right: 0 !important;
-    overflow: visible !important; 
+    overflow: hidden !important;
     transform: none !important; 
-    filter: contrast(0.9) brightness(1.0) saturate(1.8) !important;
+    outline: 0px solid red;
+	filter: contrast(0.9) brightness(1.0) saturate(1.8) !important;
 }
 
 .overlay-color {
