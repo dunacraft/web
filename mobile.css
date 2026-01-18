@@ -422,15 +422,3 @@ img[src*="banner_vert"] {
     color: #ffffff; 
     font-weight: bold;
 }
-
-/* Solo se activa cuando el móvil está acostado */
-@media screen and (max-width: 900px) and (orientation: landscape) {
-    #main-container {
-        transform: scale(0.65) !important; /* Ajusta este valor (0.6, 0.7) según veas */
-        transform-origin: top center !important;
-        margin-top: -20px !important; /* Ajuste opcional para subirlo un poco */
-        width: 150% !important; /* Compensamos el ancho para que no se vea aire */
-        left: 50% !important;
-        margin-left: -75% !important; /* Centrado clásico para elementos escalados */
-    }
-}
