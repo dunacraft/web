@@ -189,6 +189,30 @@ body {
     transform: none !important;
 }
 
+/* 1. Ocultamos cualquier imagen de fondo o secundaria que no sea la versión con _ */
+.recursos_image img:not([src*="_"]), 
+.recursos_image .img-hover {
+    display: none !important;
+}
+
+/* 2. Forzamos que la imagen con _ sea siempre visible y estática */
+.recursos_image img[src*="_"], 
+.img-transicion {
+    display: block !important;
+    visibility: visible !important;
+    opacity: 1 !important;
+    width: 82px !important;
+    height: 82px !important;
+    transition: none !important;
+    transform: none !important;
+}
+
+/* 3. Evitamos que el contenedor oculte la imagen al tocarla */
+.marco-zoom {
+    overflow: visible !important;
+    background: none !important;
+}
+
 .novedades_title {
 	position: absolute;
 	top: 1083px;
