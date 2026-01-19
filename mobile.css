@@ -21,7 +21,7 @@ body {
 
 #main-container {
     width: 360px !important; 
-    height: 655px !important;
+    height: 100% !important;
     position: relative !important;
     margin-left: auto !important;
     margin-right: auto !important;
@@ -29,22 +29,8 @@ body {
     right: 0 !important;
     overflow: hidden !important;
     transform: none !important; 
-    outline: 0px solid red;
+    outline: 1px solid red;
 	filter: contrast(0.9) brightness(1.0) saturate(1.8) !important;
-}
-
-.overlay-color {
-	width: 379px;
-	height: 751px;
-	background-color: rgba(54,58,63,0.20);
-	position: absolute;
-	left: 0;
-	pointer-events: none;
-	z-index: 5;
-	max-width: 100vh;
-	top: 0px;
-	display: none!important;
-	outline: 1px solid red;
 }
 
 .logo {
@@ -421,4 +407,27 @@ img[src*="banner_vert"] {
 .footer_text span {
     color: #ffffff; 
     font-weight: bold;
+}
+
+@media screen and (max-width: 1024px) and (orientation: landscape) {
+    #main-container {
+        /* 1. Reseteamos márgenes y posicionamiento */
+        margin-left: 50% !important;
+        transform: translateX(-50%) scale(2) !important;
+        transform-origin: top center !important;
+        
+        /* 2. Forzamos el ancho para que no dependa de porcentajes calculados */
+        width: 360px !important; /* El ancho original de tu diseño */
+        max-width: none !important;
+        
+        /* 3. Limpieza de reglas previas */
+        left: auto !important;
+        right: auto !important;
+        display: block !important;
+    }
+    
+    body {
+        overflow-x: hidden !important;
+        height: 920px !important;
+    }
 }
