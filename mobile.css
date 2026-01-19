@@ -409,7 +409,7 @@ img[src*="banner_vert"] {
     font-weight: bold;
 }
 
-@media screen and (min-width: 480px) and (max-width: 900px) {
+@media screen and (min-width: 480px) and (max-width: 1380px) {
     #main-container {
         /* 1. Reseteamos márgenes y posicionamiento */
         margin-left: 50% !important;
@@ -428,6 +428,6 @@ img[src*="banner_vert"] {
     
     body {
         overflow-x: hidden !important;
-        height: 1350px !important;
+        height: 1355px !important;
     }
 }
