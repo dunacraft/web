@@ -409,7 +409,7 @@ img[src*="banner_vert"] {
     font-weight: bold;
 }
 
-@media screen and (max-width: 1024px) and (orientation: landscape) {
+@media screen and (min-width: 480px) and (max-width: 900px) {
     #main-container {
         /* 1. Reseteamos márgenes y posicionamiento */
         margin-left: 50% !important;
