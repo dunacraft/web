@@ -428,6 +428,5 @@ img[src*="banner_vert"] {
     
     body {
         overflow-x: hidden !important;
-        height: 420px !important;
     }
 }
