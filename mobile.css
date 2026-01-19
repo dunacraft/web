@@ -29,7 +29,7 @@ body {
     right: 0 !important;
     overflow: hidden !important;
     transform: none !important; 
-    outline: 0px solid red;
+    outline: 1px solid red;
 	filter: contrast(0.9) brightness(1.0) saturate(1.8) !important;
 }
 
@@ -428,5 +428,6 @@ img[src*="banner_vert"] {
     
     body {
         overflow-x: hidden !important;
+        height: 655px !important;
     }
 }
