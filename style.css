@@ -8,9 +8,7 @@ img {
 
 body {
     background-image: 
-        /* Capa nueva: Color sólido con 15% de opacidad */
         linear-gradient(rgba(54, 58, 63, 0.23), rgba(54, 58, 63, 0.23)),
-        /* Tu gradiente original */
         linear-gradient(325deg, rgba(3, 3, 17, 1.00) 0.00%, rgba(2, 7, 5, 1.00) 47.05%, rgba(3, 23, 16, 1.00) 100%);
     margin: 0;
     padding: 0;
@@ -87,13 +85,12 @@ body {
     bottom: 30px !important;
     right: 30px !important;
     border-radius: 20px;
-    z-index: 999999 !important; /* Un nivel muy alto para que siempre esté arriba */
-    opacity: 0; /* Cambiado de 100 a 0 para que nazca invisible */
+    z-index: 999999 !important;
+    opacity: 0;
     pointer-events: none;
-    transition: opacity 1s ease; /* Transición suave de entrada/salida */
+    transition: opacity 1s ease;
 }
 
-/* Esta es la clase que el JavaScript activará */
 .ip_copy.mostrar-mensaje {
     opacity: 1 !important;
 }
@@ -247,16 +244,13 @@ body {
 
 @media (max-width: 1440px) {
     #main-container {
-        /* 1. Reseteamos márgenes y posicionamiento */
         margin-left: 50% !important;
         transform: translateX(-50%) scale(0.85) !important;
         transform-origin: top center !important;
         
-        /* 2. Forzamos el ancho para que no dependa de porcentajes calculados */
-        width: 1440px !important; /* El ancho original de tu diseño */
+        width: 1440px !important; 
         max-width: none !important;
         
-        /* 3. Limpieza de reglas previas */
         left: auto !important;
         right: auto !important;
         display: block !important;
@@ -267,3 +261,4 @@ body {
         height: 1279px !important;
     }
 }
+
